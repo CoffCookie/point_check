@@ -1,12 +1,5 @@
 
 
+#include "ptr_str.h"
 
-struct node {
-	char name[30];
-	int quantity;
-	int cost;
-} DATA_NODE;
-
-
-//ポインタの関数
-int ptr_func(int *i, struct node *name);
+int ptr_func(int i, DATA_NODE *nyado, int max);

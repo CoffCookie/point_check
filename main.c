@@ -1,28 +1,17 @@
 #include <stdio.h>
-#include "ptr.h"
-
+#include "ptr_str.h"
 
 int main(void)
 {
-  const int MAX_NODE = 2;
-  struct node nyado[MAX_NODE];
+  const int MAX = 2;
+  DATA_NODE nyado[MAX] = {0};
   int count;
 
-  for(count = 0; count < MAX_NODE; count++){
-    nyado[count].name[30] = "m";
-    nyado[count].quantity = 10;
-    nyado[count].cost = 100;
-    /*
-    scanf("%s",nyado[count].name[30]);
-    scanf("%d",nyado[count].quantity);
-    scanf("%d",nyado[count].cost);
-    */
-  }
-
-	ptr_func(&count,nyado);
-	return 0;
-}
-
-int ptr_func(int *i, struct node *name){
+	ptr_func(count,nyado,MAX);
+  for(count = 0; count < MAX; count++)
+    printf("name=%s count=%d price=%d\n",*nyado[count].name,nyado[count].quantity,nyado[count].cost);
+	
   return 0;
 }
+
+
