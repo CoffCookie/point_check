@@ -3,3 +3,6 @@ typedef struct {
 	int quantity;
 	int cost;
 } DATA_NODE;
+
+int *pk;
+
