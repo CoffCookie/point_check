@@ -4,7 +4,7 @@
 int main(void)
 {
   const int MAX = 2;
-  DATA_NODE nyado[MAX] = {0};
+  DATA_NODE nyado[MAX] = {{0,0,0},{0,0,0}};
   int count;
 
   ptr_func(count,nyado,MAX);
@@ -13,6 +13,8 @@ int main(void)
 
   //pk(=a)のアドレス
   printf("*pk=%d,&pk=%p\n", *pk,pk);
+
+  ptr_func(count,nyado,MAX);
 	
   return 0;
 }
